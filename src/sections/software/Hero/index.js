@@ -7,7 +7,7 @@ export default function HeroSection ({data}) {
   return (
     <div className='cont'>
       <video autoPlay muted loop className='videoBg'>
-        <source src="https://cdn.discordapp.com/attachments/948656546865356892/948656610622992404/X2Download.com-Free_Easter_Egg_Background_-_Free_Easter_Background360p_Trim.mp4" type="video/mp4"/>
+        <source src="https://cdn.discordapp.com/attachments/948656546865356892/949389545877680138/hero-bg-video.mp4" type="video/mp4"/>
     </video>
        <div className="overlay">
         <h1>BUNNY POLA LOST ALL HIS EGGS</h1>
