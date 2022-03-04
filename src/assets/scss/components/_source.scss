@@ -46,3 +46,25 @@
     top: 50px;
 }
 
+@media screen and (max-width: 425px) {
+    .videoBg{
+        width: 280%;
+        height: 100%;
+        z-index: -100000;
+    }
+
+    .brand-area{
+        padding-top: 35px;
+    }
+
+    .overlay{
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+}
+
