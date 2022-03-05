@@ -35,7 +35,7 @@ async function connect() {
 
 
 function checkBalance(){
-  if(balance < 100)
+  if(balance < 0.01)
     document.getElementById('qui').innerText = "hai troppi pochi token semrbi il cazzo"
   else
     document.getElementById('qui').innerText = "vero chad"
