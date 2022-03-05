@@ -44,6 +44,7 @@ const InnerHeaderButton = () => {
     </div>
   )
 }
+
 export default function PageWrapper({
   headerConfig,
   HeaderButton,

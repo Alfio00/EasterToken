@@ -8,5 +8,4 @@ export {
 } from "./Content"
 export { default as TestimonialSection } from "./Testimonial"
 export { default as IntegrationSection } from "./Integration"
-export { default as PricingSection } from "./Pricing"
 export { default as FooterSection } from "./Footer"
