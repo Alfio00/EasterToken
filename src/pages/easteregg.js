@@ -17,9 +17,6 @@ import BN from 'bn.js'
 import Moralis from "moralis";
 
 
-
-
-
 export default function EasterPage(){
   Moralis.onAccountChanged(function(){
     logout();
@@ -46,7 +43,6 @@ export default function EasterPage(){
     setLoading(true)
   }, [loading]);
  
-
   async function login(){
     console.log(isAuthenticated)
     if (!isAuthenticated) {
