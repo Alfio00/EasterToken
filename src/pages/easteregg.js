@@ -15,6 +15,8 @@ import Web3 from "web3"*/
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
 import BN from 'bn.js'
 
+
+
 export default function EasterPage(){
   
   const { authenticate, isAuthenticated, isAuthenticating, user, logout } = useMoralis();
@@ -47,7 +49,6 @@ export default function EasterPage(){
     };
     const balances = await Web3Api.account.getTokenBalances(options);
     var i
-    if(isAuthenticated){
     for(i=0; i<balances.length; i++){
       if(balances[i].token_address === '0x657fa236edbe902557e0b825162c8937418dc876'){
         var bilancio = balances[i].balance
@@ -56,7 +57,10 @@ export default function EasterPage(){
         const decimalsBN = new BN(decimali)
         const divisor = new BN('10').pow(decimalsBN)
         const beforeDecimal = balanceWeiBN.div(divisor)
-      }
+        if(beforeDecimal > 1)
+          document.getElementById('qui').innerText = 'SEI UN CHAD'
+        else 
+          document.getElementById('qui').innerText = 'FAI CACARE' 
       }
     }
   
