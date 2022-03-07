@@ -3,30 +3,25 @@ import { FooterSection } from "../sections/InnerPages"
 import errorImage from "../assets/image/404.png"
 import PageWrapper from '../components/PageWrapper'
 
-import { useWeb3React } from '@web3-react/core'
+/*import { useWeb3React } from '@web3-react/core'
 import { injected } from '../components/wallet/connectors'
 import TokenListRinkeby from '../assets/token-list-rinkeby.json'
 import useBalance from '../action/useBalance.js'
 
 import Web3Connect from "web3connect";
 import WalletConnectProvider from "@walletconnect/web3-provider";
-import Web3 from "web3"
+import Web3 from "web3"*/
 
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
-import { element } from "prop-types"
-import { name } from "file-loader"
-import BigNumber from 'bignumber.js'
 import BN from 'bn.js'
-
-
 
 export default function EasterPage(){
   
-  const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
+  const { authenticate, isAuthenticated, isAuthenticating, user, logout } = useMoralis();
   const Web3Api = useMoralisWeb3Api();
   
 
-  const login = async () => {
+  async function login(){
     if (!isAuthenticated) {
 
       await authenticate({signingMessage: "Log in using Moralis" })
@@ -39,12 +34,12 @@ export default function EasterPage(){
     }
   }
 
-  const logOut = async () => {
+  async function logOut(){
     await logout();
     console.log("logged out");
   }
 
-  const fetchTokenBalances = async () => {
+  async function fetchTokenBalances() {
     var wallet = user.get('ethAddress')
     const options = {
       chain: "bsc",
@@ -60,10 +55,7 @@ export default function EasterPage(){
         const decimalsBN = new BN(decimali)
         const divisor = new BN('10').pow(decimalsBN)
         const beforeDecimal = balanceWeiBN.div(divisor)
-        if(beforeDecimal > 1)
-          document.getElementById('qui').innerText = 'SEI UN CHAD'
-        else 
-          document.getElementById('qui').innerText = 'FAI CACARE' 
+      
       }
     }
   

@@ -46,8 +46,7 @@
     "swiper": "^6.4.11",
     "url-loader": "^4.1.1",
     "use-wallet": "^0.13.4",
-    "web3": "^1.7.0",
-    "web3connect": "^1.0.0-beta.33"
+    "web3": "^1.7.0"
   },
   "devDependencies": {
     "babel-plugin-macros": "^3.0.1",
