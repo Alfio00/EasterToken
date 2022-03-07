@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import { FooterSection } from "../sections/InnerPages"
 import errorImage from "../assets/image/404.png"
 import PageWrapper from '../components/PageWrapper'
@@ -14,21 +14,49 @@ import Web3 from "web3"*/
 
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
 import BN from 'bn.js'
+import Moralis from "moralis";
+
+
 
 
 
 export default function EasterPage(){
-  
-  const { authenticate, isAuthenticated, isAuthenticating, user, logout } = useMoralis();
+  Moralis.onAccountChanged(function(){
+    logout();
+  })
+
+  const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
   const Web3Api = useMoralisWeb3Api();
-  
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if(loading){
+      if(isAuthenticated){
+        document.getElementById('login').style.display = 'none'
+        document.getElementById('hide').style.display = 'inline'  
+        document.getElementById('hide1').style.display = 'inline'  
+      }
+      else{
+      document.getElementById('login').style.display = 'inline'
+      document.getElementById('hide').style.display = 'none'  
+      document.getElementById('hide1').style.display = 'none'  
+      }
+    }
+    setLoading(true)
+  }, [loading]);
+ 
 
   async function login(){
+    console.log(isAuthenticated)
     if (!isAuthenticated) {
 
       await authenticate({signingMessage: "Log in using Moralis" })
         .then(function (user) {
           console.log("logged in user:", user);
+          document.getElementById('login').style.display = 'none'
+          document.getElementById('hide').style.display = 'inline'  
+          document.getElementById('hide1').style.display = 'inline'  
         })
         .catch(function (error) {
           console.log(error);
@@ -39,6 +67,9 @@ export default function EasterPage(){
   async function logOut(){
     await logout();
     console.log("logged out");
+    document.getElementById('login').style.display = 'inline'
+    document.getElementById('hide').style.display = 'none'  
+    document.getElementById('hide1').style.display = 'none'  
   }
 
   async function fetchTokenBalances() {
@@ -66,54 +97,6 @@ export default function EasterPage(){
   
   };
     
-/*const { activate, account, chainId } = useWeb3React()
-
-const [selectedToken, setSelectedToken] = useState(TokenListRinkeby[0])
-
-const [balance] = useBalance(
-    selectedToken.address,
-    selectedToken.decimals
-)
-
-
-async function checkBalance(){
-  var connession = localStorage.getItem('isWalletConnected')
-  
-  if(connession.includes('true')){
-    connect
-    console.log(balance)
-  } 
-  else{
-    connect
-    console.log(balance)
-  }
-}
-
-async function connect() {
-  try {
-    await activate(injected)
-    localStorage.setItem('isWalletConnected', true)
-    checkBalance()
-  } catch (ex) {
-    console.log(ex)
-  }
-}
-
-useEffect(() => {
-  const connectWalletOnPageLoad = async () => {
-    if (localStorage?.getItem('isWalletConnected') === 'true') {
-      try {
-        await activate(injected)
-        localStorage.setItem('isWalletConnected', true)
-      } catch (ex) {
-        console.log(ex)
-      }
-    }
-  }
-  connectWalletOnPageLoad()
-}, [])*/
-
-
 
 const Header = {
   headerClasses:"site-header--menu-center site-header--sticky dark-header",
@@ -129,12 +112,11 @@ const HeaderButton = ()=>{
   )
 }
 
-
-  return (
+ return (
     <PageWrapper innerPageHeader={true} HeaderButton={<HeaderButton/>}>
-        <button onClick={login}>Moralis Metamask Login</button>
-      <button onClick={logOut} disabled={isAuthenticating}>Logout</button>
-      <button onClick={fetchTokenBalances}>Check your balance</button>
+      <button onClick={login} id='login'>Moralis Metamask Login</button>
+      <button onClick={logOut} disabled={isAuthenticating} id='hide'>Logout</button>
+      <button onClick={fetchTokenBalances} id='hide1'>Check your balance</button>
 
         <div className="thank-you-page">
           <div className="container">

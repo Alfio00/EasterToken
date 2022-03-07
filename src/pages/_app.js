@@ -9,16 +9,7 @@ import "../assets/scss/components/_source.scss"
 
 import "../assets/fonts/fontawesome-5/css/all.min.css"
 import Layout from "../components/Layout";
-
-import { Web3ReactProvider } from '@web3-react/core'
-import Web3 from 'web3'
 import { MoralisProvider } from "react-moralis";
-
-
-/*function getLibrary(provider) {
-  return new Web3(provider)
-}
-<Web3ReactProvider getLibrary={getLibrary}>*/
 
 function MyApp({ Component, pageProps}) {
       return (

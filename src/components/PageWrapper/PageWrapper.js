@@ -5,6 +5,8 @@ import Header from "../Header"
 import Link  from "../Link";
 import favicon from '../../assets/image/favicon.png'
 import Preloader from '../../assets/image/preloader.gif'
+import { useMoralis } from "react-moralis";
+
 const innerHeader = {
   headerClasses: "site-header--menu-center light-header position-relative",
   containerFluid: true,
@@ -33,6 +35,8 @@ const Loader = styled.div`
 `;
 
 const InnerHeaderButton = () => {
+  
+
   return (
     <div className="inner-header-buttons ms-auto d-none d-xs-inline-flex pe-3">
       <Link className="btn log-in-btn focus-reset" to="/sign-in">
