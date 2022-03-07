@@ -12,21 +12,22 @@ import Layout from "../components/Layout";
 
 import { Web3ReactProvider } from '@web3-react/core'
 import Web3 from 'web3'
+import { MoralisProvider } from "react-moralis";
 
 
-function getLibrary(provider) {
+/*function getLibrary(provider) {
   return new Web3(provider)
 }
+<Web3ReactProvider getLibrary={getLibrary}>*/
 
-
-const MyApp = ({ Component, pageProps}) => {
+function MyApp({ Component, pageProps}) {
       return (
           <Layout>
-            <Web3ReactProvider getLibrary={getLibrary}>
+            <MoralisProvider serverUrl="https://azf7jeolfymc.usemoralis.com:2053/server" appId="LJQ1di1ySKXiMwMc8W1bXGAsYA8QTNj7KslklElh">
               <Component {...pageProps} />
-            </Web3ReactProvider>
+            </MoralisProvider>
           </Layout>
       );
     }
 
-    export default MyApp;
+  export default MyApp;

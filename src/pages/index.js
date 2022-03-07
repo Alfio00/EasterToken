@@ -23,9 +23,9 @@ import useBalance from '../action/useBalance.js'
 
 export default function HomePage(){
 
-const { activate, account } = useWeb3React()
-
 const [selectedToken, setSelectedToken] = useState(TokenListRinkeby[0])
+
+const { activate, account } = useWeb3React()
 
 const [balance] = useBalance(
     selectedToken.address,
@@ -37,23 +37,13 @@ const Header = {
   containerFluid:true
 }
 
-async function connect() {
-  try {
-    await activate(injected)
-  
-    document.getElementById("connectButton").innerText = balance;
-  } catch (ex) {
-    console.log(ex)
-  }
-}
 
 const HeaderButton = ()=>{
   return(
     <div className="header-btns  header-btns  ms-auto d-none d-xs-inline-flex">
-     <button id="connectButton" className="btn sign-in-btn focus-reset" onClick={connect}>
-          Connnect wallet
-     </button>
-        
+  
+     <button className="btn sign-in-btn focus-reset" onClick={() => activate(injected)}>Connect wallet</button>
+     {balance}
     </div>
   )
 }

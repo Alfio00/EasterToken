@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { FooterSection } from "../sections/InnerPages"
 import errorImage from "../assets/image/404.png"
 import PageWrapper from '../components/PageWrapper'
@@ -6,15 +6,70 @@ import PageWrapper from '../components/PageWrapper'
 import { useWeb3React } from '@web3-react/core'
 import { injected } from '../components/wallet/connectors'
 import TokenListRinkeby from '../assets/token-list-rinkeby.json'
-import { useState } from 'react'
 import useBalance from '../action/useBalance.js'
+
+import Web3Connect from "web3connect";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3 from "web3"
 
-export default function EasterPage(){
+import { useMoralis, useMoralisWeb3Api } from "react-moralis";
+import { element } from "prop-types"
+import { name } from "file-loader"
+import BigNumber from 'bignumber.js'
+import BN from 'bn.js'
 
-var web3 = new Web3();  
- 
-const { activate, account, chainId } = useWeb3React()
+
+
+export default function EasterPage(){
+  
+  const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
+  const Web3Api = useMoralisWeb3Api();
+  
+
+  const login = async () => {
+    if (!isAuthenticated) {
+
+      await authenticate({signingMessage: "Log in using Moralis" })
+        .then(function (user) {
+          console.log("logged in user:", user);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  }
+
+  const logOut = async () => {
+    await logout();
+    console.log("logged out");
+  }
+
+  const fetchTokenBalances = async () => {
+    var wallet = user.get('ethAddress')
+    const options = {
+      chain: "bsc",
+      address: wallet,
+    };
+    const balances = await Web3Api.account.getTokenBalances(options);
+    var i
+    for(i=0; i<balances.length; i++){
+      if(balances[i].token_address === '0x657fa236edbe902557e0b825162c8937418dc876'){
+        var bilancio = balances[i].balance
+        var decimali = balances[i].decimals
+        const balanceWeiBN = new BN(bilancio)
+        const decimalsBN = new BN(decimali)
+        const divisor = new BN('10').pow(decimalsBN)
+        const beforeDecimal = balanceWeiBN.div(divisor)
+        if(beforeDecimal > 1)
+          document.getElementById('qui').innerText = 'SEI UN CHAD'
+        else 
+          document.getElementById('qui').innerText = 'FAI CACARE' 
+      }
+    }
+  
+  };
+    
+/*const { activate, account, chainId } = useWeb3React()
 
 const [selectedToken, setSelectedToken] = useState(TokenListRinkeby[0])
 
@@ -23,24 +78,45 @@ const [balance] = useBalance(
     selectedToken.decimals
 )
 
+
+async function checkBalance(){
+  var connession = localStorage.getItem('isWalletConnected')
+  
+  if(connession.includes('true')){
+    connect
+    console.log(balance)
+  } 
+  else{
+    connect
+    console.log(balance)
+  }
+}
+
 async function connect() {
   try {
     await activate(injected)
-    console.log(balance)
+    localStorage.setItem('isWalletConnected', true)
     checkBalance()
   } catch (ex) {
     console.log(ex)
   }
 }
 
+useEffect(() => {
+  const connectWalletOnPageLoad = async () => {
+    if (localStorage?.getItem('isWalletConnected') === 'true') {
+      try {
+        await activate(injected)
+        localStorage.setItem('isWalletConnected', true)
+      } catch (ex) {
+        console.log(ex)
+      }
+    }
+  }
+  connectWalletOnPageLoad()
+}, [])*/
 
-function checkBalance(){
-  if(balance < 0.01)
-    document.getElementById('qui').innerText = "hai troppi pochi token semrbi il cazzo"
-  else
-    document.getElementById('qui').innerText = "vero chad"
 
-}
 
 const Header = {
   headerClasses:"site-header--menu-center site-header--sticky dark-header",
@@ -50,19 +126,18 @@ const Header = {
 const HeaderButton = ()=>{
   return(
     <div className="header-btns  header-btns  ms-auto d-none d-xs-inline-flex">
-     <button id="connectButton" className="btn sign-in-btn focus-reset" onClick={connect}>
-          Connnect wallet
-     </button>
-        
+     
+   
     </div>
   )
 }
 
+
   return (
     <PageWrapper innerPageHeader={true} HeaderButton={<HeaderButton/>}>
-      <button id="connectButton" className="btn sign-in-btn focus-reset" onClick={connect}>
-          Connnect wallet
-     </button>
+        <button onClick={login}>Moralis Metamask Login</button>
+      <button onClick={logOut} disabled={isAuthenticating}>Logout</button>
+      <button onClick={fetchTokenBalances}>Check your balance</button>
 
         <div className="thank-you-page">
           <div className="container">
