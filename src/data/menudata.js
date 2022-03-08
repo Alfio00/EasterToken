@@ -2,7 +2,7 @@
 
 export const menuItems = [
          {
-           name: "easteregg",
+           name: "easteregg.html",
            label: "Easter Egg",
          },
            {

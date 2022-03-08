@@ -104,7 +104,7 @@ const HeaderButton = ()=>{
  return (
     <PageWrapper innerPageHeader={true} HeaderButton={<HeaderButton/>}>
       <button onClick={login} id='login'>Moralis Metamask Login</button>
-      <button onClicl={logOut} disabled={isAuthenticating} id='hide'>Logout</button>
+      <button onClick={logOut} disabled={isAuthenticating} id='hide'>Logout</button>
       <button onClick={fetchTokenBalances} id='hide1'>Check your balance</button>
 
         <div className="thank-you-page">
