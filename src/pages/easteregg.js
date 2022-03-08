@@ -25,7 +25,7 @@ export default function EasterPage(){
   const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
   const Web3Api = useMoralisWeb3Api();
 
-  const [loading, setLoading] = useState(false);
+  /*const [loading, setLoading] = useState(false);
 
   useEffect(() => {
   
@@ -42,8 +42,8 @@ export default function EasterPage(){
       
     }
   } 
-  
-}, [user]);
+
+}, [user]);*/
 
  
   async function login(){
