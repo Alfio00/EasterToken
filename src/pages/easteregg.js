@@ -3,29 +3,20 @@ import { FooterSection } from "../sections/InnerPages"
 import errorImage from "../assets/image/404.png"
 import PageWrapper from '../components/PageWrapper'
 
-/*import { useWeb3React } from '@web3-react/core'
-import { injected } from '../components/wallet/connectors'
-import TokenListRinkeby from '../assets/token-list-rinkeby.json'
-import useBalance from '../action/useBalance.js'
-
-import Web3Connect from "web3connect";
-import WalletConnectProvider from "@walletconnect/web3-provider";
-import Web3 from "web3"*/
-
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
 import BN from 'bn.js'
-//import Moralis from "moralis";
+import Moralis from "moralis";
 
 
 export default function EasterPage(){
-  /*Moralis.onAccountChanged(function(){
+  Moralis.onAccountChanged(function(){
     logout();
-  })*/
+  })
 
   const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
   const Web3Api = useMoralisWeb3Api();
 
-  /*const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
   
@@ -43,10 +34,10 @@ export default function EasterPage(){
     }
   } 
 
-}, [user]);*/
+}, [user]);
 
  
- /* async function login(){
+  async function login(){
     if (!isAuthenticated) {
 
       await authenticate({signingMessage: "Powered by Moralis API, your data are safe." })
@@ -93,7 +84,7 @@ export default function EasterPage(){
       }
     }
   
-  };*/
+  };
     
 
 const Header = {
@@ -112,9 +103,9 @@ const HeaderButton = ()=>{
 
  return (
     <PageWrapper innerPageHeader={true} HeaderButton={<HeaderButton/>}>
-      <button  id='login'>Moralis Metamask Login</button>
-      <button  disabled={isAuthenticating} id='hide'>Logout</button>
-      <button  id='hide1'>Check your balance</button>
+      <button onClick={login} id='login'>Moralis Metamask Login</button>
+      <button onClicl={logOut} disabled={isAuthenticating} id='hide'>Logout</button>
+      <button onClick={fetchTokenBalances} id='hide1'>Check your balance</button>
 
         <div className="thank-you-page">
           <div className="container">
