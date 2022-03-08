@@ -14,13 +14,13 @@ import Web3 from "web3"*/
 
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
 import BN from 'bn.js'
-import Moralis from "moralis";
+//import Moralis from "moralis";
 
 
 export default function EasterPage(){
-  Moralis.onAccountChanged(function(){
+  /*Moralis.onAccountChanged(function(){
     logout();
-  })
+  })*/
 
   const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
   const Web3Api = useMoralisWeb3Api();

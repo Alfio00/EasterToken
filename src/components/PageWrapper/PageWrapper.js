@@ -5,7 +5,6 @@ import Header from "../Header"
 import Link  from "../Link";
 import favicon from '../../assets/image/favicon.png'
 import Preloader from '../../assets/image/preloader.gif'
-import { useMoralis } from "react-moralis";
 
 const innerHeader = {
   headerClasses: "site-header--menu-center light-header position-relative",
@@ -55,8 +54,7 @@ export default function PageWrapper({
   children,
   innerPageHeader,
   preloader = true,
-}) {
-
+}){
   const [visibleLoader, setVisibleLoader] = React.useState(true);
   React.useEffect(() => {
     setTimeout(() => {

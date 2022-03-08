@@ -13,7 +13,6 @@ import {
 import PageWrapper from '../components/PageWrapper'
 export default function HomePage(){
 
-
 const Header = {
   headerClasses:"site-header--menu-center site-header--sticky dark-header",
   containerFluid:true
