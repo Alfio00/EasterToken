@@ -11,6 +11,9 @@ import Moralis from "moralis";
 export default function EasterPage(){
   Moralis.onAccountChanged(function(){
     logout();
+    document.getElementById('login').style.display = 'inline'
+    document.getElementById('hide').style.display = 'none'  
+    document.getElementById('hide1').style.display = 'none'  
   })
 
   const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
