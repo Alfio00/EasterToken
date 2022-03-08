@@ -1,16 +1,14 @@
 import React from 'react'
 import Link from "../components/Link"
-import {
-    FooterSection,
-  } from "../sections/InnerPages"
+
 
   import {Accordion} from "react-bootstrap";
   import {AccordionItemFull} from "../components/Accordion"
   import {faqDataOne,faqDataTwo,faqDataThree,faqDataFour,faqDataFive} from "../data/faq"
-  import PageWrapper from '../components/PageWrapper'
+
 const Faq =()=>{
     return(
-       <PageWrapper  innerPageHeader={true}>
+       <>
   {/* Blog Single Area  */}
   <div className="faq-main-banner">
     <div className="container">
@@ -87,9 +85,8 @@ const Faq =()=>{
       </div>
     </div>
   </div>
-  {/* Footer Area */}
-  <FooterSection />
-       </PageWrapper>
+
+    </>
     )
 }
 

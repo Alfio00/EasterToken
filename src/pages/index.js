@@ -7,7 +7,8 @@ import {
   ContentSectionTwo,
   ContentSectionThree,
   FooterSection,
-  TestimonialSection
+  TestimonialSection,
+  Faq
 } from "../sections/software"
 
 import PageWrapper from '../components/PageWrapper'
@@ -36,6 +37,7 @@ const HeaderButton = ()=>{
       <ContentSectionTwo />
       <ContentSectionThree />
       <TestimonialSection />
+      <Faq />
       <FooterSection/>
     </PageWrapper>
   )
