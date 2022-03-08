@@ -28,7 +28,8 @@ export default function EasterPage(){
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if(loading){
+  
+    if(typeof user != 'undefined'){
       if(isAuthenticated){
         document.getElementById('login').style.display = 'none'
         document.getElementById('hide').style.display = 'inline'  
@@ -38,16 +39,17 @@ export default function EasterPage(){
       document.getElementById('login').style.display = 'inline'
       document.getElementById('hide').style.display = 'none'  
       document.getElementById('hide1').style.display = 'none'  
-      }
+      
     }
-    setLoading(true)
-  }, [loading]);
+  } 
+  
+}, [user]);
+
  
   async function login(){
-    console.log(isAuthenticated)
     if (!isAuthenticated) {
 
-      await authenticate({signingMessage: "Log in using Moralis" })
+      await authenticate({signingMessage: "Powered by Moralis API, your data are safe." })
         .then(function (user) {
           console.log("logged in user:", user);
           document.getElementById('login').style.display = 'none'
