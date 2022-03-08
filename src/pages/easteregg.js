@@ -46,7 +46,7 @@ export default function EasterPage(){
 }, [user]);*/
 
  
-  async function login(){
+ /* async function login(){
     if (!isAuthenticated) {
 
       await authenticate({signingMessage: "Powered by Moralis API, your data are safe." })
@@ -93,7 +93,7 @@ export default function EasterPage(){
       }
     }
   
-  };
+  };*/
     
 
 const Header = {
@@ -112,9 +112,9 @@ const HeaderButton = ()=>{
 
  return (
     <PageWrapper innerPageHeader={true} HeaderButton={<HeaderButton/>}>
-      <button onClick={login} id='login'>Moralis Metamask Login</button>
-      <button onClick={logOut} disabled={isAuthenticating} id='hide'>Logout</button>
-      <button onClick={fetchTokenBalances} id='hide1'>Check your balance</button>
+      <button  id='login'>Moralis Metamask Login</button>
+      <button  disabled={isAuthenticating} id='hide'>Logout</button>
+      <button  id='hide1'>Check your balance</button>
 
         <div className="thank-you-page">
           <div className="container">
