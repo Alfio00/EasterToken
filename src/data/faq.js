@@ -22,7 +22,7 @@ export const faqDataOne = [
     {
         "accKey":"5",
         "question":"Does it make sense to hold a higher percentage of tokens?",
-        "answer":"Si, avrà senso perchè chi detiene il 3%+ della supply avrà diritto a percentuali di drop delle ricompense migliori e quindi più possibilità di trovare un premio più raro"
+        "answer":"Yes, it will make sense because those who hold 3%+ of the supply will be entitled to better drop rates of rewards and therefore more chances to find a rarer prize."
     },
     {
         "accKey":"6",
