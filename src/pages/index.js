@@ -30,7 +30,6 @@ export default function HomePage(){
 
 
   useEffect(() => {
-    console.log(loading)
     if(loading){
       if(isAuthenticated){
         document.getElementById('login1').style.display = 'none'
@@ -42,8 +41,6 @@ export default function HomePage(){
     }
   } 
   setLoading(true)
-  console.log(loading)
-  console.log(loading)
 
 }, [loading]);
 
@@ -79,7 +76,7 @@ const Header = {
 const HeaderButton = ()=>{
   return(
     <div className="header-btns  header-btns  ms-auto d-none d-xs-inline-flex">
-      <button onClick={login} id='login1'>Moralis Metamask Login</button>
+      <a onClick={login} id="login1" class="btn41-43 btn-42" style={{fontWeight: '900'}}>Connect Wallet</a>
       <button onClick={logOut} disabled={isAuthenticating} id='hide2'>Logout</button>
     </div>
   )

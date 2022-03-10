@@ -1,6 +1,6 @@
 import React from "react"
 import Link  from "../../../../components/Link"
-import imageOne from "../../../../assets/image/landing-1/chart-img-1.png"
+import imageOne from "../../../../assets/image/landing-1/bunny-image1.png"
 import imageTwo from "../../../../assets/image/landing-1/chart-small-img-1.png";
 
 const ContentSectionOne = ({ ...rest }) => {
@@ -28,7 +28,8 @@ const ContentSectionOne = ({ ...rest }) => {
                 </div>
                 <div className="content__btn">
                   <Link
-                    to={"/"}
+                    to={"https://t.me/BunnyCoinBSC"}
+                    target="_blank"
                     className="btn  btn--link focus-reset focus-reset"
                   >
                     Join us on Telegram
@@ -43,12 +44,7 @@ const ContentSectionOne = ({ ...rest }) => {
               data-aos-once="true"
             >
               <div className="content-image-group-1">
-                <div className="image__1">
                   <img src={imageOne} alt="content"/>
-                </div>
-                <div className="image__2">
-                  <img src={imageTwo} alt="content"/>
-                </div>
               </div>
             </div>
           </div>

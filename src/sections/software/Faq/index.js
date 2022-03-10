@@ -4,7 +4,7 @@ import Link from "../../../components/Link"
 
   import {Accordion} from "react-bootstrap";
   import {AccordionItemFull} from "../../../components/Accordion"
-  import {faqDataOne,faqDataTwo,faqDataThree,faqDataFour,faqDataFive} from "../../../data/faq"
+  import {faqDataOne} from "../../../data/faq"
 
 export default function Faq({...rest}){
     return(
@@ -26,13 +26,6 @@ export default function Faq({...rest}){
       <div className="row">
         <div className="col-lg-3">
           <div className="faq-main-tab-area sticky">
-            <ul className="list-unstyled">
-              <li><Link to="#general">General</Link></li>
-              <li><Link to="#account">Accounts</Link></li>
-              <li><Link to="#sell">Sells</Link></li>
-              <li><Link to="#support">Support License</Link></li>
-              <li><Link to="#refund">Refund</Link></li>
-            </ul>
           </div>
         </div>
         <div className="col-xl-6 col-lg-8 col-md-10 faq-single-all-items">
@@ -45,46 +38,11 @@ export default function Faq({...rest}){
                 )})}
             </Accordion>
           </div>
-          <div className="faq-main-area-single" id="account">
-            <h2>Accounts</h2>
-            <Accordion className="accordion">
-                {faqDataTwo.map(({question,answer,accKey
-                },index)=>{return(
-                    <AccordionItemFull question={question} answer={answer} accKey={accKey} key={index}/>
-                )})}
-            </Accordion>
-          </div>
-          <div className="faq-main-area-single" id="sell">
-            <h2>Sales</h2>
-            <Accordion className="accordion">
-                {faqDataThree.map(({question,answer,accKey
-                },index)=>{return(
-                    <AccordionItemFull question={question} answer={answer} accKey={accKey} key={index}/>
-                )})}
-            </Accordion>
-          </div>
-          <div className="faq-main-area-single" id="support">
-            <h2>Support License</h2>
-            <Accordion className="accordion">
-                {faqDataFour.map(({question,answer,accKey
-                },index)=>{return(
-                    <AccordionItemFull question={question} answer={answer} accKey={accKey} key={index}/>
-                )})}
-            </Accordion>
-          </div>
-          <div className="faq-main-area-single" id="refund">
-            <h2>Refund</h2>
-            <Accordion className="accordion">
-                {faqDataFive.map(({question,answer,accKey
-                },index)=>{return(
-                    <AccordionItemFull question={question} answer={answer} accKey={accKey} key={index}/>
-                )})}
-            </Accordion>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
 
     </>
     )

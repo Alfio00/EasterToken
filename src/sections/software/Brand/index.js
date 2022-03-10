@@ -1,12 +1,12 @@
 
 import React from 'react'
 
-import imageOne from "../../../assets/image/brand-black/l1.png";
-import imageTwo from "../../../assets/image/brand-black/l2.png";
-import imageThree from "../../../assets/image/brand-black/l3.png";
-import imageFour from "../../../assets/image/brand-black/l4.png";
-import imageFive from "../../../assets/image/brand-black/l5.png";
-import imageSix from "../../../assets/image//brand-black/l6.png";
+import imageOne from "../../../assets/image/brand-black/bscscan.png";
+import imageTwo from "../../../assets/image/brand-black/cmc.png";
+import imageThree from "../../../assets/image/brand-black/cg.png";
+import imageFour from "../../../assets/image/brand-black/poocoin.png";
+import imageFive from "../../../assets/image/brand-black/moon.png";
+import imageSix from "../../../assets/image//brand-black/pancake.png";
 
 
 export default function BrandSection() {

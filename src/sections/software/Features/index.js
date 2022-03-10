@@ -22,14 +22,14 @@ const data = [
 ] 
 const FeatureSection = ({ ...rest }) => {
   return (
-  <div className="feature-area">
+  <div className="feature-area" style={{paddingTop: '85px'}}>
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-xl-6 col-lg-8 col-md-9 col-sm-12">
           <div className="section__heading text-center">
             <h2>How it works</h2>
             <p>Two easy steps: buy and HDOL!</p>
-            <p className="hodl">If you hold for more then 24h (min. 100 $EGGS)</p>
+            <p style={{fontWeight: 'bold'}}>If you hold for more then 24h (min. 100 $EGGS)</p>
             <p id="last">your easter egg will unlocked and you ll be ready to redeem a BNB rewars</p>
           </div>
         </div>
