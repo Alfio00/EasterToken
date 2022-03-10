@@ -43,7 +43,7 @@ const ContentSectionOne = ({ ...rest }) => {
               data-aos-duration={800}
               data-aos-once="true"
             >
-              <div className="image__2">
+              <div className="image__2 col-xs-12">
                   <img src={imageOne} alt="content" id="image_one"/>
               </div>
             </div>

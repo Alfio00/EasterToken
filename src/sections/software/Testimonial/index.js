@@ -60,7 +60,7 @@ const TestimonialSection = () => {
      <h2 id="Tokenomics">Tokenomics</h2 >
 </div>
   <div className="row">
-  <div className="col-6 col-sm-12 col-xs-6">
+  <div className="col-md-6 col-sm-12 col-xs-12">
     <Chart
     chartType="PieChart"
     data={data2}
@@ -69,7 +69,7 @@ const TestimonialSection = () => {
     width="800px"
     />
   </div>
-  <div className="col-6 col-sm-12 col-xs-6">
+  <div className="col-md-6 col-sm-12 col-xs-12">
     <Chart
     chartType="PieChart"
     data={data}
