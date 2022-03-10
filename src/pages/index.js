@@ -23,7 +23,7 @@ const Header = {
 const HeaderButton = ()=>{
   return(
     <div className="header-btns  header-btns  ms-auto d-none d-xs-inline-flex">
-      <a href='/easteregg' id="login1" class="btn41-43 btn-42" style={{fontWeight: '900'}}>Lunch app</a>
+      <a href='/easteregg' id="login1" class="btn41-43 btn-42" style={{fontWeight: '900'}}>Launch app</a>
     </div>
   )
 }
