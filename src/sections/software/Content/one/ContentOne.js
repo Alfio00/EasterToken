@@ -19,11 +19,11 @@ const ContentSectionOne = ({ ...rest }) => {
             >
               <div className="content">
                 <div className="section__heading">
-                  <h2>Provide best results to your customers.</h2>
+                  <h2>What's BunnyCoin?</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat.
+                    BunnyCoinBSC is a new project that favors holders.
+                    You have heard over and over again that now the BSC smart chain is claiming victims every day,
+                    our bunny with his sweet face will help those who truly believe in this chain to obtain the best possible results.
                   </p>
                 </div>
                 <div className="content__btn">
@@ -31,7 +31,7 @@ const ContentSectionOne = ({ ...rest }) => {
                     to={"/"}
                     className="btn  btn--link focus-reset focus-reset"
                   >
-                    Learn more
+                    Join us on Telegram
                   </Link>
                 </div>
               </div>

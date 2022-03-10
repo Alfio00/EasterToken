@@ -1,6 +1,5 @@
 import React from "react"
 import { Chart } from 'react-google-charts';
-import 'chart.js/auto';
 
 
 var data = [
@@ -20,7 +19,8 @@ var options = {
     alignment: 'center',
   },
   pieSliceText: 'none',
-  colors: ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600']
+  colors: ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600'],
+
 }
 
 var options2 = {
@@ -31,7 +31,10 @@ var options2 = {
     alignment: 'center',
   },
   pieSliceText: 'none',
-  colors: ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600']
+  colors: ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600'],
+  backgroundColor: {
+    fill:'trasparent'
+  }
 }
 
 const TestimonialSection = () => {
@@ -41,7 +44,7 @@ const TestimonialSection = () => {
      <h2>Tokenomics</h2>
 </div>
   <div className="row">
-  <div className="col-6">
+  <div className="col-6 chart1">
     <Chart
     chartType="PieChart"
     data={data}

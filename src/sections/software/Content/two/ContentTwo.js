@@ -23,14 +23,14 @@ const ContentSectionTwo = ({ ...rest }) => {
       <div className="col-lg-6 col-md-10 col-sm-12" data-aos="fade-left" data-aos-duration={800} data-aos-once="true">
         <div className="content">
           <div className="section__heading">
-            <h2>Get targeted customers
-              to your valuable product.</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-              et dolore magna aliquyam erat.</p>
+            <h2>The advantages for holders are many, why?
+            </h2>
+            <p>it is very simple to understand, those who hold at least 0.5% of the supply will have the opportunity to receive 
+              a guaranteed prize in bnb from the egg that each of you will have in your account and which will open exactly on
+              Easter day, the prizes are many and the luckiest will even win the X BNB prize.</p>
           </div>
           <div className="content__btn">
-            <Link to="/" className="btn  btn--link focus-reset focus-reset">Learn
-              more</Link>
+            <Link to="/" className="btn  btn--link focus-reset focus-reset">Check our platform</Link>
           </div>
         </div>
       </div>

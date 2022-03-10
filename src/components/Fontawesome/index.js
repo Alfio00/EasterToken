@@ -29,7 +29,8 @@ import {
   faFlag,
   faChartLine,
   faPlay,
-  faLayerGroup
+  faLayerGroup,
+  faRocket
 } from "@fortawesome/free-solid-svg-icons"
 
 import {
@@ -37,9 +38,11 @@ import {
   faGoogle,
   faInstagram,
   faTwitter,
-  faFacebookSquare
+  faFacebookSquare,
+  faTelegram
+  
   // faYoutube,
-} from "@fortawesome/free-brands-svg-icons"
+} from "@fortawesome"
 
 library.add(
   faLayerGroup,
@@ -76,5 +79,7 @@ library.add(
   faChartPie,
   faFlag,
   faChartLine,
-  faPlay
+  faPlay,
+  faRocket,
+  faTelegram
 )

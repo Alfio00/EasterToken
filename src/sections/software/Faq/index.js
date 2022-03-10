@@ -4,7 +4,7 @@ import Link from "../../../components/Link"
 
   import {Accordion} from "react-bootstrap";
   import {AccordionItemFull} from "../../../components/Accordion"
-  import {faqDataOne,faqDataTwo,faqDataThree,faqDataFour,faqDataFive} from "../../../data/faqs"
+  import {faqDataOne,faqDataTwo,faqDataThree,faqDataFour,faqDataFive} from "../../../data/faq"
 
 export default function Faq({...rest}){
     return(

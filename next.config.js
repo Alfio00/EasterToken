@@ -48,7 +48,16 @@ module.exports = withFonts( withOptimizedImages({
     sassOptions: {
         includePaths: [path.join(__dirname, 'assets/scss/')],
         },
+    node: {
+        fs: 'empty',
+         net: 'empty',
+         tls: 'empty',
+    }
+    
 }));
+
+
+    
 
 
 // module.exports = {

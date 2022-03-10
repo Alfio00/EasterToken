@@ -4,9 +4,8 @@ export { default as FeatureSection } from "./Features"
 export {
   ContentSectionOne,
   ContentSectionTwo,
-  ContentSectionThree,
 } from "./Content"
 export { default as TestimonialSection } from "./Testimonial"
-export { default as IntegrationSection } from "./Integration"
+export { default as RoadMap } from "./RoadMap"
 export { default as Faq } from "./Faq"
 export { default as FooterSection } from "./Footer"

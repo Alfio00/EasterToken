@@ -64,7 +64,7 @@ export default function PageWrapper({
   return (
     <>
     <Head>
-          <title>Sandar</title>
+          <title>BunnyCoin BSC</title>
           <link rel="icon" type="image/png" href={favicon} />
     </Head>
       <Loader id="loading" className={visibleLoader ? "" : "inActive"}>

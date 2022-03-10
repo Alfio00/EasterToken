@@ -23,7 +23,7 @@ export default function EasterPage(){
 
   useEffect(() => {
   
-    if(typeof user != 'undefined'){
+    if(loading){
       if(isAuthenticated){
         document.getElementById('login').style.display = 'none'
         document.getElementById('hide').style.display = 'inline'  
@@ -36,8 +36,9 @@ export default function EasterPage(){
       
     }
   } 
+  setLoading(true)
 
-}, [user]);
+}, [loading]);
 
  
   async function login(){
