@@ -7,7 +7,7 @@ import {RiExchangeDollarLine, RiRepeatLine, RiLuggageDepositLine} from 'react-ic
 export default function RoadMap ({...rest}){
     return(
         <>
-       <h2 style={{marginTop: '30px'}}>Roadmap</h2>
+       <h2 style={{marginTop: '30px'}} id="Roadmap">Roadmap</h2>
 <div class="timeline"> 
   <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
     <div class="timeline__event__icon ">

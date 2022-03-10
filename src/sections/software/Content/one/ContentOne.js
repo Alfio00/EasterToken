@@ -1,6 +1,6 @@
 import React from "react"
 import Link  from "../../../../components/Link"
-import imageOne from "../../../../assets/image/landing-1/bunny-image1.png"
+import imageOne from "../../../../assets/image/landing-1/logo_nosfondo.png"
 import imageTwo from "../../../../assets/image/landing-1/chart-small-img-1.png";
 
 const ContentSectionOne = ({ ...rest }) => {
@@ -43,8 +43,8 @@ const ContentSectionOne = ({ ...rest }) => {
               data-aos-duration={800}
               data-aos-once="true"
             >
-              <div className="content-image-group-1">
-                  <img src={imageOne} alt="content"/>
+              <div className="image__2">
+                  <img src={imageOne} alt="content" id="image_one"/>
               </div>
             </div>
           </div>

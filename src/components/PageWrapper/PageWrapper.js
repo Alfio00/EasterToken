@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Head from "next/head";
 import Header from "../Header"
 import Link  from "../Link";
-import favicon from '../../assets/image/favicon.png'
+import favicon from '../../assets/image/logo/logo.png'
 import Preloader from '../../assets/image/preloader.gif'
 
 const innerHeader = {

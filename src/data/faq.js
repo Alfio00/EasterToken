@@ -11,17 +11,22 @@ export const faqDataOne = [
     },
     {
         "accKey":"3",
-        "question":"Does it work with WordPress?",
-        "answer":"Create custom landing pages with appex that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website. Totally clean coded easy to maintain."
+        "question":"What will happen after easter",
+        "answer":"the project will continue because after the Easter rewards will not stop! A rebranding will be done for each holiday, such as Christmas, Halloween, etc."
     },
     {
         "accKey":"4",
-        "question":"Will you provide support?",
-        "answer":"Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service."
+        "question":"Why is this a long-term project?",
+        "answer":"Because, in addition to continuing the rewards after Easter, a staking platform will be implemented that will allow holders to increase their earnings by joining the BunnyCoin ecosystem."
     },
     {
         "accKey":"5",
-        "question":"Does appex offer XD & Sketch file ?",
-        "answer":"Create custom landing pages with appex that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website. Totally clean coded easy to maintain."
+        "question":"Does it make sense to hold a higher percentage of tokens?",
+        "answer":"Si, avrà senso perchè chi detiene il 3%+ della supply avrà diritto a percentuali di drop delle ricompense migliori e quindi più possibilità di trovare un premio più raro"
+    },
+    {
+        "accKey":"6",
+        "question":"Where can I buy? ",
+        "answer":"After the contract is released, you will be able to purchase the token on pancakeswap, poocoin or any other BSC exchanger"
     }
 ]

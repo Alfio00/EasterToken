@@ -78,5 +78,22 @@
     #hide1{
         display:none;
     }  
+
+    @media screen and (max-width: 320px) {
+       #image_one{
+        width: 315px;
+       }
+    }
+    @media screen and (max-width: 375px) {
+        #image_one{
+         width: 380px;
+        }
+     }
+     @media screen and (max-width: 425px) {
+        #image_one{
+         width: 420px;
+        }
+     }
+  
 }
 

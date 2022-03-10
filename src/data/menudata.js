@@ -6,17 +6,20 @@ export const menuItems = [
            label: "Easter Egg",
          },
            {
-           name: "#tokenomics",
+           name: "#Tokenomics",
            label: "Tokenomics",
              },
+             {
+              name: "#Roadmap",
+              label: "Roadmap",
+                },
+             {
+              name: "#FAQ",
+              label: "FAQ",
+            },
              {
               name: "https://pancakeswap.finance/swap",
               label: "Buy Token",
               isExternal: true,
             },
-             
-         {
-           name: "",
-           label: "FAQ",
-         },
        ];

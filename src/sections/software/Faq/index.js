@@ -15,7 +15,7 @@ export default function Faq({...rest}){
       <div className="row justify-content-center">
         <div className="col-12">
           <div className="content text-center">
-            <h2>Frequently Asked Question</h2>
+            <h2 id="FAQ">Frequently Asked Question</h2>
           </div>
         </div>
       </div>

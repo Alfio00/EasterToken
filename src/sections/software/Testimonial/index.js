@@ -4,22 +4,37 @@ import { Chart } from 'react-google-charts';
 
 var data = [
   ["Task", "Hours per Day"],
-  ["Work", 11],
-  ["Eat", 2],
-  ["Commute", 2],
-  ["Watch TV", 2],
-  ["Sleep", 7],
+  ["Liquidity Pool", 10],
+  ["Marketing Wallet", 7],
+  ["Charity Wallet", 2],
+  ["Dev Wallet", 1],
 ];
 
+var data2 =[
+  ["Task", "Hours per Day"],
+  ["Liquidity Pool", 8],
+  ["Marketing Wallet", 5],
+  ["Charity Wallet", 1],
+  ["Dev Wallet", 1],
+]
+
 var options = {
-  title: 'Token Supply Distribution',
+  title: 'Buy taxes (15%)',
   pieHole: 0.5,
   legend: {
     position: 'right',
     alignment: 'center',
   },
   pieSliceText: 'none',
-  colors: ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600'],
+  colors: ['#003f5c', '#58508d', '#bc5090',  '#ffa600'],
+  backgroundColor: {
+    fill: 'transparent',
+  },
+  vAxis: {
+    minValue: 1,
+    maxValue: 15,
+    format: "#.#'%'"
+} 
 
 }
 
@@ -31,29 +46,30 @@ var options2 = {
     alignment: 'center',
   },
   pieSliceText: 'none',
-  colors: ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600'],
+  colors: ['#003f5c', '#58508d', '#bc5090',  '#ffa600'],
   backgroundColor: {
-    fill:'trasparent'
+    fill:'transparent'
   }
+
 }
 
 const TestimonialSection = () => {
   return( 
     <>
-<div className="section__heading text-center" id="tokenomics">
-     <h2>Tokenomics</h2>
+<div className="section__heading text-center" >
+     <h2 id="Tokenomics">Tokenomics</h2 >
 </div>
   <div className="row">
-  <div className="col-6 chart1">
+  <div className="col-6 col-sm-12 col-xs-6">
     <Chart
     chartType="PieChart"
-    data={data}
+    data={data2}
     options={options}
     height= '100%'
-    width="1000px"
+    width="800px"
     />
   </div>
-  <div className="col-6 chart2">
+  <div className="col-6 col-sm-12 col-xs-6">
     <Chart
     chartType="PieChart"
     data={data}

@@ -1,7 +1,7 @@
 import React from "react"
 import Link  from "../../../../components/Link"
 import imageOne from "../../../../assets/image/landing-1/chart-img-2.png"
-import imageTwo from "../../../../assets/image/landing-1/chart-small-img-2.png"
+import imageTwo from "../../../../assets/image/landing-1/coniglio-navicella.png"
 
 const ContentSectionTwo = ({ ...rest }) => {
   return (
@@ -11,14 +11,9 @@ const ContentSectionTwo = ({ ...rest }) => {
   <div className="container">
     <div className="row justify-content-center align-items-center">
       <div className="col-lg-6 col-md-10 col-sm-12" data-aos="fade-right" data-aos-duration={800} data-aos-once="true">
-        <div className="content-image-group-2">
-          <div className="image__1">
-            <img className="w-100" src={imageOne} alt="content" />
-          </div>
           <div className="image__2">
-            <img src={imageTwo} alt="content" />
+            <img src={imageTwo} alt="content" id="image_one" />
           </div>
-        </div>
       </div>
       <div className="col-lg-6 col-md-10 col-sm-12" data-aos="fade-left" data-aos-duration={800} data-aos-once="true">
         <div className="content">
