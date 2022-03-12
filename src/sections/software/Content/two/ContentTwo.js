@@ -25,7 +25,7 @@ const ContentSectionTwo = ({ ...rest }) => {
               Easter day, the prizes are many and the luckiest will even win the X BNB prize.</p>
           </div>
           <div className="content__btn">
-            <Link to="/" className="btn  btn--link focus-reset focus-reset">Check our platform</Link>
+            <Link to="/easteregg.html" className="btn  btn--link focus-reset focus-reset">Check our platform</Link>
           </div>
         </div>
       </div>
