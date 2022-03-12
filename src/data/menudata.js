@@ -2,7 +2,7 @@
 
 export const menuItems = [
          {
-           name: "easteregg.html",
+           name: "bunnycoinbsc.com/easteregg.html",
            label: "Easter Egg",
          },
            {
