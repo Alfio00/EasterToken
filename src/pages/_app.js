@@ -8,6 +8,7 @@ import "../assets/scss/react-scss.scss"
 import "../assets/scss/components/_source.scss"
 import "../assets/scss/sections/_roadmap.scss"
 import "../assets/scss/bs-theming/_btn.scss"
+import "../assets/scss/sections/easteregg.scss"
 
 import "../assets/fonts/fontawesome-5/css/all.min.css"
 import Layout from "../components/Layout";

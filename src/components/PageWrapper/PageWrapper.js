@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Head from "next/head";
 import Header from "../Header"
 import Link  from "../Link";
-import favicon from '../../assets/image/logo/logo.png'
+import favicon from '../../assets/image/favicon.png'
 import Preloader from '../../assets/image/preloader.gif'
 
 const innerHeader = {
@@ -64,7 +64,7 @@ export default function PageWrapper({
   return (
     <>
     <Head>
-          <title>BunnyCoin BSC</title>
+          <title>BunnyCoinBSC</title>
           <link rel="icon" type="image/png" href={favicon} />
     </Head>
       <Loader id="loading" className={visibleLoader ? "" : "inActive"}>

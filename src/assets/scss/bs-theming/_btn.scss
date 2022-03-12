@@ -63,6 +63,26 @@
     background: transparent;
    }
    
+   .btnEgg {
+    --color: #000000;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    background: transparent;
+   }
+   
    .btnHero:before {
     content: "";
     position: absolute;
@@ -73,8 +93,22 @@
     border-radius: 50%;
    }
    
+   .btnEgg:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .btnEgg:hover {
+    color: rgb(255, 255, 255);
+   }
+
    .btnHero:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
    }
    
    .btnHero:before {
@@ -89,6 +123,22 @@
    }
    
    .btnHero:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+   }
+
+   .btnEgg:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .btnEgg:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .btnEgg:active:before {
     background: #3a0ca3;
     transition: background 0s;
    }

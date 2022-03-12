@@ -1,6 +1,6 @@
 .videoBg{
 
-    width: 100%;
+    width: 104%;
     height: 100%;
     z-index: -100000;
 }
@@ -8,7 +8,7 @@
 .cont { position:relative; }
 .cont .videoBg {
     position:relative;
-    z-index:-1;
+    z-index:-1000;
 }
 .overlay {
     position:absolute;
