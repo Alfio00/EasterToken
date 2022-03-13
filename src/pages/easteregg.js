@@ -154,7 +154,7 @@ async function logOut(){
         <div className="col-6 centering" >  
                <button onClick={clickEgg} type="button" className="box closed" style={{display: 'none'}} id="egg"></button>
                <h2 id="qui"></h2>
-               <button onClick={fetchTokenBalances}  class="btnEgg" id='hide1' style={{width:'auto'}}>Check your balance</button>     
+               <button onClick={fetchTokenBalances}  class="btnEgg"  style={{width:'auto'}}>Check your balance</button>     
               
         </div>
         </div>
