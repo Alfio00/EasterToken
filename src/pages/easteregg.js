@@ -28,7 +28,7 @@ export default function EasterPage(){
 
   const HeaderButton = ()=>{
     return(
-      <div className="header-btns  header-btns  ms-auto d-none d-xs-inline-flex">
+      <div className="header-btns  header-btns ">
         <button class="btnEgg" onClick={login} id='login'>Connect Wallet</button>
         <button class="btnEgg" onClick={logOut} id='hide'>Logout</button>
       </div>

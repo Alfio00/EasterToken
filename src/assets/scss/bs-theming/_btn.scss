@@ -142,3 +142,10 @@
     background: #3a0ca3;
     transition: background 0s;
    }
+
+   @media screen and (min-width: 320px) {
+     .btnEgg{
+       display: block;
+     }
+     
+   }
